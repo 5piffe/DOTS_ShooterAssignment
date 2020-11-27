@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1821514538695760048}
   - component: {fileID: 1821514538695760051}
   m_Layer: 0
-  m_Name: Star_withsystems
+  m_Name: Star_withsystemsMid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
