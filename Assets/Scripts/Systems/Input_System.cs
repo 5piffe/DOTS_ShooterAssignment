@@ -5,6 +5,7 @@ using UnityEngine;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Transforms;
+using Unity.Rendering;
 using System;
 
 public class Input_System : SystemBase
@@ -23,6 +24,11 @@ public class Input_System : SystemBase
             moveData.moveDirection.y -= Convert.ToInt32(down);
             moveData.moveDirection.x = Convert.ToInt32(right);
             moveData.moveDirection.x -= Convert.ToInt32(left);
+
+			if (shoot)
+			{
+                // Japp
+            }
 
         }).Run();
     }
