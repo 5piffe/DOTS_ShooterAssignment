@@ -33,6 +33,6 @@ public class MovingStar_System : SystemBase
                     position.Value.y = rnd;
 				}
 
-            }).ScheduleParallel(); // TODO: kolla parallel och schedule osv. Kolla hur fan man ser threads i profiler också.
+            }).ScheduleParallel();
     }
 }

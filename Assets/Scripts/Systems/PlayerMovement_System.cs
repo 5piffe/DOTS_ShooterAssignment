@@ -6,14 +6,13 @@ using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-//[AlwaysSynchronizeSystem] // TODO: Need this? check up
 public class PlayerMovement_System : SystemBase
 {
     protected override void OnUpdate()
     {
         float deltaTime = Time.DeltaTime;
         float xBounds = 18f;
-        float yBounds = 11f; // TODO: Screenbounds fixa på nåt bätrtre vis
+        float yBounds = 11f;
 
         Entities.
             WithAny<Player_Tag>().

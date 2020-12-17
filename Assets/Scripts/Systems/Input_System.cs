@@ -27,7 +27,7 @@ public class Input_System : SystemBase
 
 			if (shoot)
 			{
-                // Japp
+                //
             }
 
         }).Run();
