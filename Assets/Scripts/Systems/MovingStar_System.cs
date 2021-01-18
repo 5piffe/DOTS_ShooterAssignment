@@ -10,16 +10,15 @@ using Unity.Transforms;
 public class MovingStar_System : SystemBase
 {
     private Unity.Mathematics.Random random;
-    private const float boundsX = 18f; // TODO: Screen bounds fixa
-    private const float boundsY = 11f;
     protected override void OnCreate()
 	{
         random = new Unity.Mathematics.Random(24);
     }
+
 	protected override void OnUpdate()
     {
         float deltaTime = Time.DeltaTime;
-        float rnd = random.NextFloat(-boundsY + 2, boundsY);
+        float rnd = random.NextFloat(-18 + 2, 11);
 
         Entities.
             WithAny<Star_Tag>().
@@ -27,9 +26,9 @@ public class MovingStar_System : SystemBase
             {
                 position.Value.x -= 1f * movementData.moveSpeed * deltaTime;
 
-				if (position.Value.x < -boundsX)
+				if (position.Value.x < -movementData.ScreenBounds().x)
 				{
-                    position.Value.x = boundsX;
+                    position.Value.x = movementData.ScreenBounds().x;
                     position.Value.y = rnd;
 				}
 

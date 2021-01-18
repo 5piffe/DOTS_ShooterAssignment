@@ -24,11 +24,7 @@ public class Input_System : SystemBase
             moveData.moveDirection.y -= Convert.ToInt32(down);
             moveData.moveDirection.x = Convert.ToInt32(right);
             moveData.moveDirection.x -= Convert.ToInt32(left);
-
-			if (shoot)
-			{
-                //
-            }
+            moveData.shooting = shoot;
 
         }).Run();
     }

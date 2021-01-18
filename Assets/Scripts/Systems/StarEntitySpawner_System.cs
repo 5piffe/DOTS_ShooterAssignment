@@ -5,6 +5,7 @@ using Unity.Mathematics;
 public class StarEntitySpawner_System : ComponentSystem
 {
 	private Random random;
+
 	protected override void OnStartRunning()
 	{
 		random = new Random(48);
