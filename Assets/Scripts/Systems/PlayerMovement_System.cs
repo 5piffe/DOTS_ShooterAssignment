@@ -21,7 +21,6 @@ protected override void OnUpdate()
                 position.Value.x = (math.clamp(position.Value.x + normalizedDirection.x * movementData.moveSpeed * deltaTime, -movementData.ScreenBounds().x, movementData.ScreenBounds().x));
                 position.Value.y = (math.clamp(position.Value.y + normalizedDirection.y * movementData.moveSpeed * deltaTime, -movementData.ScreenBounds().y + 2, movementData.ScreenBounds().y));
 
-
             }).Run();
     }
 }
